@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 public class cinema {
     private String cinemaName;
+    private ArrayList<customers> customersArrayList;
+    private ArrayList<employees> employeesArrayList;
     private ArrayList<movie> movieArrayList;
     private ArrayList<hall> hallArrayList;
 

@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-
-
 public class movie {
     private String movieName;
     private int minAgeToWatch;
@@ -11,14 +8,24 @@ public class movie {
         this.movieName = name;
         this.minAgeToWatch = age;
     }
-    public checkAgeHorror(customers customer){
-        if (customers.age >= 18) return true;
+
+    public String getMovieName(){return this.movieName;}
+    public int getMinAgeToWatch(){return this.minAgeToWatch;}
+    public int getMovieLength(){return this.movieLength;}
+    public boolean checkAgeHorror(customers customer){
+        if (customer.getAge() >= 18) return true;
+        return false;
     }
-    public checkAgeComedy(customers customer){
+    public boolean checkAgeComedy(customers customer){
         return true;
     }
-    public checkAgStressful(customers customer){
-        if (customers.age >= 16) return true;
+    public boolean checkAgStressful(customers customer){
+        if (customer.getAge() >= 16) return true;
+        return false;
     }
-
+    public boolean equalMovie(movie movie){ return this.movieName.equals(movie.movieName); }
+    public void describeMovie (){
+        System.out.println("The movie" + this.movieName + "is good for ages above" + this.minAgeToWatch +
+                "and this is a" + this.get + ". The movie length is " + this.movieLength + "minutes.");
+    }
 }
