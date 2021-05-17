@@ -1,19 +1,20 @@
-import java.util.Calendar;
 import java.util.Date;
-import java.text.SimpleDateFormat;
 
 
 public class soldierCustomer extends customers{
+    private Date endDateOfService = new Date(2022, 1, 3);
 
-    //private date endDateOfService;
-    public soldierCustomer(String name, String email, String id, String phoneNumber,int age) {
+    public soldierCustomer(String name, String email, String id, String phoneNumber, int age) {
         super(name, email, id, phoneNumber, age);
     }
 
+    public double recieveDiscount(double cost) {
+        return 0; // change price
+    }
+
     public boolean checkIfInService(){
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = new Date();
-        //System.out.println(formatter.format(date));
-        if (date.after(this.endDateOfService))
+        Date currentDate = new Date();
+        boolean answer = this.endDateOfService.before(currentDate);
+        return answer;
     }
 }

@@ -7,11 +7,16 @@ public class pensionerCustomer extends customers{
 
     }
 
-    public String type_of_customer() {
+    public double recieveDiscount(double cost) {
+        return 0; //change price
+    }
+
+    public boolean checkIfInpension() {
+        boolean answer = false;
         if (this.getAge()>65) {
-            return "Pensioner";
+            answer = true;
         }
-        return "Customer";
+        return answer;
     }
 }
 

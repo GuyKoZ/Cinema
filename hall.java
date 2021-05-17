@@ -1,19 +1,24 @@
-import java.util.ArrayList;
-
 public class hall {
     private int hallNumber;
     private int rows;
-    private int chairsInRow;
+    private int columns;
+    private movie movie;
+    private  int [][] movieArray;
 
-    public hall(int hallNumber, int rows, int chairsInRow){
-        this.chairsInRow = chairsInRow;
+    public hall(int hallNumber, int rows, int columns, movie movie, int[][] movieArray){
+        this.columns = columns;
         this.rows = rows;
         this.hallNumber = hallNumber;
-    }
-    public orders buyTickets(customers customer){
+        this.movie = movie;
+        this.movieArray = movieArray;
+        this.movieArray = new int[rows][columns]; //array size in the constructor or in the class?
+
 
     }
-    public void updateMovie(movie movie){
-
+    // public orders buyTickets(customers customer){
+  //  }
+    public void updateMovie(movie movie){ //if value of some index == null its empty chair.
+    this.movie = movie;
+    movieArray = null;
     }
 }

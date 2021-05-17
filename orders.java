@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 
 public class orders extends hall {
-
     private String movieName;
     private int hallNumber;
     private int rowNumber;
     private int chairNumber;
     private int ticketPrice;
 
-    public orders(String movieName, int hallNumber, int rowNumber, int chairNumber, int ticketPrice){
-        this.chairNumber = chairNumber;
+    public orders(int hallNumber, int rows, int columns, movie movie, int[][] movieArray, String movieName, int hallNumber1, int rowNumber, int chairNumber, int ticketPrice) {
+        super(hallNumber, rows, columns, movie, movieArray);
         this.movieName = movieName;
-        this.hallNumber = hallNumber;
+        this.hallNumber = hallNumber1;
         this.rowNumber = rowNumber;
+        this.chairNumber = chairNumber;
         this.ticketPrice = ticketPrice;
     }
     public boolean equalOrders(orders order){ return this.equalOrders(order); }
