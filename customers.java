@@ -8,6 +8,7 @@ public abstract class customers {
     private String id;
     private String phoneNumber;
     private int age;
+
     public customers (String name, String email, String id, String phoneNumber, int age){
         this.email = email;
         this.id = id;
@@ -15,27 +16,28 @@ public abstract class customers {
         this.phoneNumber = phoneNumber;
         this.age = age;
     }
+
     public int getAge(){return this.age;}
     public String getId(){return this.id;}
     public String getName(){return this.name;}
     public String getPhoneNumber(){return this.phoneNumber;}
-    public movie chooseMovie (movie [] movieList){
-    movie choice = null;
-    boolean flag = false;
-    Random rn = new Random();
-    int size = rn.nextInt(movieList.length);
-    while (flag == false) {
-        if (this.age >=movieList[size].getMinAgeToWatch());{
+    public movie chooseMovie (movie [] movieList){ // get an array
+        movie choice = null;
+        boolean flag = false;
+        Random rn = new Random();
+        int size = rn.nextInt(movieList.length);
+        while (flag == false) {
+        if (this.age >= movieList[size].getMinAgeToWatch());{
             choice = movieList[size];
             flag = true;
-            break;
+            }
         }
-    }
-    return choice;
-    }
+        return choice;
+        }
+
     public String choosePopcorn (){
         Random rn = new Random();
-        int size = rn.nextInt(3) + 1;
+        int size = rn.nextInt(3) + 1; // random number between 1 to 3. 1 = big, 2 = medium, 3 = small
         String size2;
         if(size == 1) {
             size2 = "Big";
@@ -48,6 +50,7 @@ public abstract class customers {
         size2 = "Small";
         return size2;
     }
+
     public abstract double  recieveDiscount (double cost );
 
     public boolean equalCustomer (customers customer) { return this.id.equals(customer.id);}

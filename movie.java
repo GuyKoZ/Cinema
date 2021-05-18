@@ -39,9 +39,10 @@ public class movie {
         return true;
     }
     public boolean checkAgStressful(customers customer){
-        if (customer.getAge() >= 16) return true;
-        return false;
+        if (customer.getAge() >= 16) {return true;}
+        else{ return false;}
     }
+
     public boolean equalMovie(movie movie){ return this.movieName.equals(movie.movieName); }
     public void describeMovie (){
         System.out.println("The movie" + this.movieName + "is good for ages above" + this.minAgeToWatch +

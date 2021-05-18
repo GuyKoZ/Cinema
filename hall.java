@@ -15,8 +15,9 @@ public class hall {
 
 
     }
-    // public orders buyTickets(customers customer){
-  //  }
+     public orders buyTickets(customers customer){
+    }
+
     public void updateMovie(movie movie){ //if value of some index == null its empty chair.
     this.movie = movie;
     movieArray = null;

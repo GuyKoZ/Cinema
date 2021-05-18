@@ -15,6 +15,10 @@ public class orders extends hall {
         this.chairNumber = chairNumber;
         this.ticketPrice = ticketPrice;
     }
+
+    public void sellTicket(){
+
+    }
     public boolean equalOrders(orders order){ return this.equalOrders(order); }
     public void describeOrder (){
         System.out.println("The order for" + this.movieName + "is ready. You'll be sitted at row number" + this.rowNumber +

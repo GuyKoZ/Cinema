@@ -6,23 +6,26 @@ public class employees extends customers{ // not sure
         super(name, email, id, phoneNumber, age);
         this.arr = new double[30];
         this.salaryPerHour = salaryPerHour;
+
     }
+
     public double sellPopcorn(String size, customers customer){
-        double prise;
+        double price;
         if (size.equals("Big")) {
-            prise = 30;
+            price = 30;
         }
         else if (size.equals("Small")){
-            prise = 10;
+            price = 10;
         }
-        else prise = 20;
-        prise = prise * customer.recieveDiscount(prise);
-        return prise;
+        else price = 20;
+        price = customer.recieveDiscount(price);
+        return price;
     }
     public void sellTicket(customers customer, movie movie){
 
+
     }
-    public void calculateSalary(){
+    public int calculateSalary(){
 
     }
     public boolean equalEmployee(employees employee){ return this.getId().equals(employee.getId()); }
