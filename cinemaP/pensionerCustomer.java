@@ -1,3 +1,5 @@
+package cinemaP;
+
 import java.util.Calendar;
 public abstract class pensionerCustomer extends customers implements discount {
     public pensionerCustomer(String name, String email, String id, String phoneNumber, int age) {
@@ -17,5 +19,3 @@ public abstract class pensionerCustomer extends customers implements discount {
     }
 
 }
-
-

@@ -1,3 +1,4 @@
+package cinemaP;
 import java.util.ArrayList;
 
 public abstract class employees  extends customers implements discount {
@@ -21,20 +22,30 @@ public abstract class employees  extends customers implements discount {
         return price;
     }
 
-    public void sellTicket(customers customer, movie movie) {
-
-        double price;
-     // price = customer.recivedDiscount();
-
+    public orders sellTicket(customers customer, movie movie, hall [] halls) {
+        int i , flag = 0, maxSeats = 0, freeSeats,saveIndex = 0;
+        orders order;
+        for(i = 0; i < halls.length ; i++) {
+            if(halls[i]!=null && halls[i].getMovie().equalMovie(movie)) {
+                freeSeats = halls[i].countSeats();
+                if (freeSeats > maxSeats) {
+                    maxSeats = freeSeats;
+                    saveIndex = i;
+                }
+            }
+        }
+        order = halls[saveIndex].buyTickets(customer);
+        order.describeOrder();
+        return order;
     }
 
     public double calculateSalary(){
         double salary = 0;
         for(double i:arr){
-          salary = salary + (i * salaryPerHour);
+            salary = salary + (i * salaryPerHour);
         }
         return salary;
-     }
+    }
 
     public boolean equalEmployee(employees employee) {
         return this.getId().equals(employee.getId());

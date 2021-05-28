@@ -1,3 +1,4 @@
+package cinemaP;
 import java.time.LocalDate;
 import java.util.Date;
 public abstract class soldierCustomer extends customers implements discount {

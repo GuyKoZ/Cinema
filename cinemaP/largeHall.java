@@ -1,20 +1,17 @@
+package cinemaP;
 import java.util.Arrays;
-import java.util.Calendar;
 
-public class smallHall extends hall {
-    private int ticketPrice = 42;
-
-
-    public smallHall(int hallNumber, int rows, int columns, movie movie, int[][] movieArray) {
-        super(hallNumber, rows, columns, movie, movieArray);
-        rows = 8; //check
-        columns = 10; //check
+public class largeHall extends hall {
+    public largeHall(int ticketPrice, int hallNumber, int rows, int columns, cinemaP.movie movie, int[][] movieArray) {
+        super(ticketPrice, hallNumber, rows, columns, movie, movieArray);
+        rows = 16;  //check
+        columns = 20; //check
+        ticketPrice = 42;
         movieArray = new int[rows][columns];
         for (int [] row: movieArray){
             Arrays.fill(row,0);
         }
     }
-
     public orders buyTickets(customers customer) {
         int flag = 0;
         int rowNumberTicket = 0;
@@ -30,7 +27,12 @@ public class smallHall extends hall {
             }
         }
         double ticketFinalPrice = customer.recivedDiscount(ticketPrice);
-        orders ticket = new orders(this.hallNumber, rowNumberTicket,columnNumberTicket, movie.getMovieName(), ticketFinalPrice );
+        orders ticket = new orders(this.hallNumber, rowNumberTicket, columnNumberTicket, movie.getMovieName(), ticketFinalPrice) {
+            @Override
+            public orders buyTickets(customers customer) {
+                return null;
+            }
+        };
         return ticket;
     }
 }

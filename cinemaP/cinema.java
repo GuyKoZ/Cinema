@@ -1,11 +1,13 @@
+package cinemaP;
 import java.util.ArrayList;
 
 public class cinema {
     private String cinemaName;
     private ArrayList<customers> customersArrayList;
     private ArrayList<employees> employeesArrayList;
-    public ArrayList<movie> movieArrayList;
+    public  ArrayList<movie> movieArrayList;
     private ArrayList<hall> hallArrayList;
+    private int x,y;
 
     public void setName(String name){
         this.cinemaName = name;
@@ -22,6 +24,8 @@ public class cinema {
         this.employeesArrayList = employeesArrayList;
         this.movieArrayList = movieArrayList;
         this.hallArrayList = hallArrayList;
+        movieArrayList = new ArrayList <movie>();
+        hallArrayList = new ArrayList <hall>();
     }
 
     public void addMovie (movie movie){
@@ -39,7 +43,6 @@ public class cinema {
         System.out.println("Employee deleted successfully");
     }
     public void sellMovieTicket (customers customers, employees employee){
-
 
     }
     public void sellPopcorn (customers customers, employees employee){

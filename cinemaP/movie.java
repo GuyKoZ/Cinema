@@ -1,3 +1,5 @@
+package cinemaP;
+
 public class movie {
     private String movieName;
     private int minAgeToWatch;
@@ -19,7 +21,7 @@ public class movie {
         boolean answer = false;
         if(type.equals("Horror") && customer.getAge()>=16);
         {
-             answer = true;
+            answer = true;
         }
         if(type.equals("Stressful") && customer.getAge()>=18);
         {
