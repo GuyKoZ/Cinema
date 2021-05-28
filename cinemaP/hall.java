@@ -1,3 +1,5 @@
+package cinemaP;
+
 public abstract class hall {
     protected int hallNumber;
     public int rows;

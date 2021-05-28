@@ -1,3 +1,4 @@
+package cinemaP;
 public class movie {
     private String movieName;
     private int minAgeToWatch;

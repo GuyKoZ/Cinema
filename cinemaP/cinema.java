@@ -1,3 +1,4 @@
+package cinemaP;
 import java.util.ArrayList;
 
 public class cinema {

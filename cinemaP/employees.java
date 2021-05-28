@@ -1,4 +1,7 @@
+package cinemaP;
+
 import java.util.ArrayList;
+package cinemaP;
 
 public abstract class employees  extends customers implements discount {
     private double[] arr;

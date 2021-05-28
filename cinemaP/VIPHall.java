@@ -1,12 +1,14 @@
+package cinemaP;
 import java.util.Arrays;
+import java.util.Calendar;
 
-public class largeHall extends hall {
-    int ticketPrice = 30;
+public class VIPHall extends hall {
+    int ticketPrice = 67;
 
-    public largeHall(int hallNumber, int rows, int columns, movie movie, int[][] movieArray) {
+    public VIPHall(int hallNumber, int rows, int columns, movie movie, int[][] movieArray) {
         super(hallNumber, rows, columns, movie, movieArray);
-        rows = 16;  //check
-        columns = 20; //check
+        rows = 8; //check
+        columns = 12; //check
         movieArray = new int[rows][columns];
         for (int [] row: movieArray){
             Arrays.fill(row,0);
@@ -32,3 +34,4 @@ public class largeHall extends hall {
         return ticket;
     }
 }
+
