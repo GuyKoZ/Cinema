@@ -1,9 +1,9 @@
 public abstract class hall {
     protected int hallNumber;
-    private int rows;
-    private int columns;
-    private movie movie;
-    private int[][] movieArray;
+    public int rows;
+    public int columns;
+    public movie movie;
+    protected int[][] movieArray;
 
     public hall(int hallNumber, int rows, int columns, movie movie, int[][] movieArray) {
         this.columns = columns;
@@ -12,8 +12,9 @@ public abstract class hall {
         this.movie = movie;
         this.movieArray = movieArray;
         this.movieArray = new int[rows][columns]; //array size in the constructor or in the class?
-
     }
+
+    public hall() {}
 
     public abstract orders buyTickets(customers customer);
 

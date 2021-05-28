@@ -4,7 +4,7 @@ public class cinema {
     private String cinemaName;
     private ArrayList<customers> customersArrayList;
     private ArrayList<employees> employeesArrayList;
-    private ArrayList<movie> movieArrayList;
+    public ArrayList<movie> movieArrayList;
     private ArrayList<hall> hallArrayList;
 
     public void setName(String name){

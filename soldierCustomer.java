@@ -16,10 +16,10 @@ public abstract class soldierCustomer extends customers implements discount {
     }
 
     //    public boolean checkIfInService(){
-//        Date currentDate = new Date();
-//        boolean answer = currentDate.endDateOfService.before(currentDate);
-//        return answer;
-//    }
+    //        Date currentDate = new Date();
+    //        boolean answer = currentDate.endDateOfService.before(currentDate);
+    //        return answer;
+    //    }
     public double recieveDiscount(double cost) {
         LocalDate today = LocalDate.now();
         boolean checkIfBefore = today.isBefore(endDateOfService);

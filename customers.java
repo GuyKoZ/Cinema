@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class customers  implements discount {
+public abstract class customers implements discount {
     private String name;
     private String email;
     private String id;

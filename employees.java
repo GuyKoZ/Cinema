@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public abstract class employees  extends customers implements discount {
     private double[] arr;
     private int salaryPerHour;
@@ -20,6 +22,7 @@ public abstract class employees  extends customers implements discount {
     }
 
     public void sellTicket(customers customer, movie movie) {
+
         double price;
      // price = customer.recivedDiscount();
 
