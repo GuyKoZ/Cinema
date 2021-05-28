@@ -33,6 +33,7 @@ public class main {
 //        Employee E2 = new Employee(124, 2725, 22, "Or", "Or@mail", totalHours, 35);
 //        Oby.addNewEmployee(E1);
 //        Oby.addNewEmployee(E2);
+        
 //        Movie M1 = new ThrillerMovie("The Godfather", 16, 140);
 //        Movie M2 = new ThrillerMovie("The Zodiac", 16, 155);
 //        Movie M3 = new ComedyMovie("Charli And a Half", 0, 110);
