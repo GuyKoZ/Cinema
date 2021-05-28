@@ -1,10 +1,7 @@
 import java.util.Calendar;
-
-public class pensionerCustomer extends customers{
-
+public abstract class pensionerCustomer extends customers implements discount {
     public pensionerCustomer(String name, String email, String id, String phoneNumber, int age) {
-        super(name, email, id, phoneNumber,age);
-
+        super(name, email, id, phoneNumber, age);
     }
 
     public double recieveDiscount(double cost) {
@@ -13,10 +10,12 @@ public class pensionerCustomer extends customers{
 
     public boolean checkIfInpension() {
         boolean answer = false;
-        if (this.getAge()>65) {
+        if (this.getAge() > 65) {
             answer = true;
         }
         return answer;
     }
+
 }
+
 
