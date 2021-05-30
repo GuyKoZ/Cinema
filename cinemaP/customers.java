@@ -1,44 +1,48 @@
-package cinemaP;
-import java.util.ArrayList;
+package CinemaP;
 import java.util.Random;
 
-public abstract class customers implements discount {
-    private String name;
-    private String email;
-    private String id;
-    private String phoneNumber;
-    private int age;
+public class Customers implements Discount { // using discount
+    final private String name;
+    final private String email;
+    final private String id;
+    final private String phoneNumber;
+    final private int age;
 
-    public customers(String name, String email, String id, String phoneNumber, int age) {
+    // cunstroctur 
+    public Customers(String name, String email, String id, String phoneNumber, int age) {
+        this.name = name;
         this.email = email;
         this.id = id;
-        this.name = name;
         this.phoneNumber = phoneNumber;
         this.age = age;
     }
-
-    public int getAge() {
-        return this.age;
+    // cheking if two customer are the same one
+    public boolean equalCustomer(Customers customer) {
+        return this.id.equals(customer.id);
     }
-
-    public String getId() {
-        return this.id;
+    
+    public void describeCustomer() {
+        System.out.println(this.name + " is " + this.age + " years old. This is the contact information: " + this.phoneNumber);
     }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public String getPhoneNumber() {
-        return this.phoneNumber;
-    }
-
-    public movie chooseMovie(movie[] movieList) { // get an array
-        movie choice = null;
+   
+    public Movie chooseMovie(Movie[] movieList) { // get an array
+        Movie choice;
+        int size, count = 0;
         boolean flag = false;
         Random rn = new Random();
-        int size = rn.nextInt(movieList.length);
-        while (flag == false) {
+        size = rn.nextInt(movieList.length);
+        choice = movieList[size];
+        while (!flag && count < movieList.length) { // ranbdomize over and over untill found
+            if (choice == null) {
+                size = rn.nextInt(movieList.length);
+                choice = movieList[size];
+            } else {
+                flag = true;
+            }
+            count++;
+        }
+        flag = false;
+        while (!flag) {
             if (this.age >= movieList[size].getMinAgeToWatch()) ;
             {
                 choice = movieList[size];
@@ -46,6 +50,11 @@ public abstract class customers implements discount {
             }
         }
         return choice;
+    }
+
+    @Override
+    public double receiveDiscount(double cost) {
+        return cost;
     }
 
     public String choosePopcorn() {
@@ -64,12 +73,9 @@ public abstract class customers implements discount {
         return size2;
     }
 
-    public boolean equalCustomer(customers customer) {
-        return this.id.equals(customer.id);
-    }
-
-    public void describeCustomer() {
-        System.out.println(this.name + "is" + this.age + "years old. This is the contact information:" + this.phoneNumber);
-    }
+    public int getAge() {return this.age; }
+    public String getId() {return this.id; }
+    public String getName() {return this.name; }
+    public String getPhoneNumber() {return this.phoneNumber; }
 
 }

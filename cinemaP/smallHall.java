@@ -1,26 +1,35 @@
-package cinemaP;
-import java.util.Arrays;
-import java.util.Calendar;
+package CinemaP;
 
-public class smallHall extends hall {
-
-    public smallHall(int ticketPrice, int hallNumber, int rows, int columns, cinemaP.movie movie, int[][] movieArray) {
+public final class SmallHall extends Hall { // sum of hall
+    // relevant constructer 
+    public SmallHall(int ticketPrice, int hallNumber, int rows, int columns, Movie movie, int[][] movieArray) {
         super(ticketPrice, hallNumber, rows, columns, movie, movieArray);
-        rows = 8; //check
-        columns = 10; //check
-        movieArray = new int[rows][columns];
         ticketPrice = 30;
-        for (int [] row: movieArray){
-            Arrays.fill(row,0);
-        }
+        this.hallNumber = hallNumber;
+        this.rows = rows;
+        this.columns = columns;
+        this.movie = movie;
+        this.movieArray = movieArray;
+        columns = 10;
+        rows = 8;
+        movieArray = new int[this.rows][this.columns];
     }
-    public orders buyTickets(customers customer) {
-        int flag = 0;
-        int rowNumberTicket = 0;
-        int columnNumberTicket = 0;
-        for (int i = rows; i > 0 && flag == 0 ; i--) {
-            for (int j = columns; j > 0  && flag == 0; j--) {
-                if (movieArray[i][j] != 0) {
+
+    public SmallHall(int hallNumber, Movie movie) { // specific constructer to the use of specific func
+        ticketPrice = 30;
+        this.hallNumber = hallNumber;
+        this.movie= movie;
+        columns = 10;
+        rows = 8;
+        movieArray = new int[this.rows][this.columns];
+    }
+
+    @Override
+    public Orders buyTickets(Customers customer) {
+        int flag = 0,rowNumberTicket = 0,columnNumberTicket = 0;
+        for (int i = rows - 1; i >= 0 && flag == 0; i--) { // starting to sell from the upper right corner
+            for (int j = columns - 1; j >= 0 && flag == 0; j--) {
+                if (movieArray[i][j] == 0) {
                     movieArray[i][j]++;
                     rowNumberTicket = i;
                     columnNumberTicket = j;
@@ -28,16 +37,8 @@ public class smallHall extends hall {
                 }
             }
         }
-        double ticketFinalPrice = customer.recivedDiscount(ticketPrice);
-        orders ticket = new orders(this.hallNumber, rowNumberTicket, columnNumberTicket, movie.getMovieName(), ticketFinalPrice) {
-            @Override
-            public orders buyTickets(customers customer) {
-                return null;
-            }
-        };
-        return ticket;
+        double ticketFinalPrice = customer.receiveDiscount(this.ticketPrice);
+        return new Orders(movie.getMovieName(), this.hallNumber, rowNumberTicket + 1, columnNumberTicket + 1, ticketFinalPrice); // to return the correct seat and row
     }
-
-
 }
 

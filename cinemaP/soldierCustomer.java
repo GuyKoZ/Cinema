@@ -1,33 +1,23 @@
-package cinemaP;
+package CinemaP;
 import java.time.LocalDate;
-import java.util.Date;
-public abstract class soldierCustomer extends customers implements discount {
+
+public final class SoldierCustomer extends Customers implements Discount { // sun of customer
+    // relevant attribute
     LocalDate endDateOfService;
-
-    public soldierCustomer(String name, String email, String id, String phoneNumber, int age) {
+    // relevant constructer
+    public SoldierCustomer(String name, String email, String id, String phoneNumber, int age, LocalDate releaseDate) {
         super(name, email, id, phoneNumber, age);
+        this.endDateOfService = releaseDate;
     }
 
-    public LocalDate getEndDateOfService() {
-        return endDateOfService;
-    }
-
-    public void setEndDateOfService(LocalDate endDateOfService) {
-        this.endDateOfService = endDateOfService;
-    }
-
-    //    public boolean checkIfInService(){
-    //        Date currentDate = new Date();
-    //        boolean answer = currentDate.endDateOfService.before(currentDate);
-    //        return answer;
-    //    }
-    public double recieveDiscount(double cost) {
+    @Override
+    public double receiveDiscount(double cost) { // the relevant calculate if the entity is eligible
         LocalDate today = LocalDate.now();
-        boolean checkIfBefore = today.isBefore(endDateOfService);
+        boolean checkIfBefore = today.isBefore(endDateOfService); // verify that soldier still in service
         if (checkIfBefore) {
-            return 0;
+            return 0; // if in service it's free ticket
         } else {
-            return cost;
+            return cost; // not eligible for soldier ticket
         }
     }
 }

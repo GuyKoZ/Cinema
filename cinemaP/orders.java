@@ -1,28 +1,27 @@
-package cinemaP;
-import java.util.ArrayList;
+package CinemaP;
 
-public abstract class orders extends hall {
+public final class Orders {
+    // relevant attributes
     private String movieName;
+    private int hallNumber;
     private int rowNumber;
     private int chairNumber;
-
-    public orders(int ticketPrice, int hallNumber, int rows, int columns, cinemaP.movie movie, int[][] movieArray, String movieName, int rowNumber, int chairNumber) {
-        super(ticketPrice, hallNumber, rows, columns, movie, movieArray);
+    private double ticketPrice;
+    // create constructer
+    public Orders(String movieName, int hallNumber, int rowNumber, int chairNumber, double ticketPrice) {
         this.movieName = movieName;
+        this.hallNumber = hallNumber;
         this.rowNumber = rowNumber;
         this.chairNumber = chairNumber;
+        this.ticketPrice = ticketPrice;
     }
 
-    public orders(int hallNumber, int rowNumberTicket, int columnNumberTicket, String movieName, double ticketFinalPrice) {
-        super();
-    }
-
-    public boolean equalOrders(orders order) {
+    public boolean equalOrders(Orders order) { // if two orders are the same 
         return this.equalOrders(order);
     }
 
     public void describeOrder() {
-        System.out.println("The order for" + this.movieName + "is ready. You'll be sitted at row number" + this.rowNumber +
-                "and the chair number is" + this.chairNumber + "in hall number " + hallNumber + ". The ticket's price is " + this.ticketPrice);
+        System.out.println("The order for " + this.movieName + " is ready. You'll be sitted at row number " + this.rowNumber +
+                " and the chair number is " + this.chairNumber + " in hall number " + hallNumber + ".\n" + "The ticket's price is " + this.ticketPrice);
     }
 }

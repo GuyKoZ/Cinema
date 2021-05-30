@@ -1,37 +1,25 @@
-package cinemaP;
+package CinemaP;
 import java.time.LocalDate;
-import java.util.Date;
 
-public abstract class studentCustomer extends customers implements discount {
+public final class StudentCustomer extends Customers implements Discount { // sun of customer 
+    // relevant attributes
     private String academicInstitution;
-    LocalDate graduationDate;
-
-    public studentCustomer(String name, String email, String id, String phoneNumber, int age) {
+    private LocalDate graduationDate;
+    // relevant constructer 
+    public StudentCustomer(String name, String email, String id, String phoneNumber, int age, LocalDate graduationDate, String academicInstitution) {
         super(name, email, id, phoneNumber, age);
-    }
-
-    public double recieveDiscount(double cost) {
-        LocalDate currentDate = LocalDate.now();
-        boolean answer = currentDate.isBefore(graduationDate);
-        if (answer) {
-            return cost * 0.5;
-        }
-        return cost;
-    }
-
-    public LocalDate getGraduationDate() {
-        return graduationDate;
-    }
-
-    public void setGraduationDate(LocalDate graduationDate) {
+        this.academicInstitution = academicInstitution;
         this.graduationDate = graduationDate;
     }
 
-    private LocalDate getDateOfGraduation() {
-        return this.graduationDate;
+    @Override
+    public double receiveDiscount(double cost) {
+        LocalDate currentDate = LocalDate.now();
+        boolean answer = currentDate.isBefore(graduationDate); // check if the student still before graduation
+        if (answer) {
+            return cost * 0.5; // eligible for discount
+        }
+        return cost; // the entity isn't studnent and not eligible
     }
 
-    private String getAcademicInstitution() {
-        return this.academicInstitution;
-    }
 }

@@ -1,41 +1,49 @@
-package cinemaP;
+package CinemaP;
 
-public abstract class hall {
-    int ticketPrice;
+public abstract class Hall {
+    // relevant attributes
+    protected int ticketPrice;
     protected int hallNumber;
     public int rows;
     public int columns;
-    public movie movie;
+    protected Movie movie;
     protected int[][] movieArray;
-
-    public hall(int ticketPrice, int hallNumber, int rows, int columns, cinemaP.movie movie, int[][] movieArray) {
+    // create constructer and init the array with relevant rows and columns
+    public Hall(int ticketPrice, int hallNumber, int rows, int columns, Movie movie, int[][] movieArray) {
         this.ticketPrice = ticketPrice;
         this.hallNumber = hallNumber;
         this.rows = rows;
         this.columns = columns;
         this.movie = movie;
         this.movieArray = movieArray;
-        this.movieArray = new int[rows][columns]; //array size in the constructor or in the class?
-
+        this.movieArray = new int[rows][columns];
     }
-    public hall() { }
 
-    public cinemaP.movie getMovie() { return movie; }
+    public Hall() { } // empty for use of other func
 
-    public int getTicketPrice() { return ticketPrice; }
-    public int getHallNumber() { return hallNumber; }
+    public Movie getMovie() { return this.movie; }
 
-    public int getRows() { return rows; }
+    public int getHallNumber() {
+        return this.hallNumber;
+    }
 
-    public int getColumns() { return columns; }
+    public int getRows() {
+        return rows;
+    }
 
-    public int[][] getMovieArray() { return movieArray; }
+    public int getColumns() {
+        return columns;
+    }
 
-    public int countSeats() {
+    public int[][] getMovieArray() {
+        return movieArray;
+    }
+
+    public int countSeats(Hall hall) { // count how many seats in the matrix 
         int count = 0;
-        for(int i = 0; i < columns; ++i) {
-            for(int j = 0; j < rows; ++j) {
-                if (movieArray[i][j] == 0) {
+        for (int j = 0; j < hall.getRows(); ++j) {
+            for (int i = 0; i < hall.getColumns(); ++i) {
+                if (hall.getMovieArray()[j][i] == 0) {
                     count++;
                 }
             }
@@ -43,10 +51,10 @@ public abstract class hall {
         return count;
     }
 
-    public abstract orders buyTickets(customers customer);
+    public abstract Orders buyTickets(Customers customer);
 
-    public void updateMovie(movie movie) { //if value of some index == null its empty chair.
+    public void updateMovie(Movie movie) {
         this.movie = movie;
-        movieArray = null;
+        this.movieArray = new int[this.rows][this.columns];
     }
 }

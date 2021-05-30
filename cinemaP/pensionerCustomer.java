@@ -1,21 +1,16 @@
-package cinemaP;
+package CinemaP;
 
-import java.util.Calendar;
-public abstract class pensionerCustomer extends customers implements discount {
-    public pensionerCustomer(String name, String email, String id, String phoneNumber, int age) {
+public final class PensionerCustomer extends Customers implements Discount {
+    public PensionerCustomer(String name, String email, String id, String phoneNumber, int age) {
         super(name, email, id, phoneNumber, age);
     }
 
-    public double recieveDiscount(double cost) {
+    @Override
+    public double receiveDiscount(double cost) { // there's an awsome discount specific for pensioner
         return 0; //change price
     }
 
-    public boolean checkIfInpension() {
-        boolean answer = false;
-        if (this.getAge() > 65) {
-            answer = true;
-        }
-        return answer;
+    public boolean checkIfInpension() { return this.getAge() > 65; // that's the pensioner age
     }
 
 }
