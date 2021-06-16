@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="39a7c310-ccf2-41aa-a6a6-eead4e438ecb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema.java" beforeDir="false" afterPath="$PROJECT_DIR$/cinema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employees.java" beforeDir="false" afterPath="$PROJECT_DIR$/employees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hall.java" beforeDir="false" afterPath="$PROJECT_DIR$/hall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/VIPHall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/VIPHall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/customers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/customers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/employees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/employees.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/hall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/hall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/largeHall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/largeHall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/orders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/smallHall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/smallHall.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/soldierCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/soldierCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Cinema/studentCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Cinema/studentCustomer.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1sRfByplbYjo62O0n6hssPvYo8e" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Cinema" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kobi" type="Java Scratch">
+      <module name="Cinema" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Java Scratch.kobi" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39a7c310-ccf2-41aa-a6a6-eead4e438ecb" name="Default Changelist" comment="" />
+      <created>1620840198549</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620840198549</updated>
+      <workItem from="1620840204178" duration="474000" />
+      <workItem from="1621097993862" duration="5166000" />
+      <workItem from="1621175094738" duration="10738000" />
+      <workItem from="1621879292773" duration="1414000" />
+      <workItem from="1622128490209" duration="1214000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
